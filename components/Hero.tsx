@@ -128,8 +128,14 @@ export default function Hero() {
       <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-takumi-red/40 rounded-full animate-pulse-slow hidden md:block" style={{ animationDelay: '1.5s' }} />
 
       <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-5xl mx-auto animate-fade-in">
+        {/* Mobile: Enhanced background gradient orbs */}
+        <div className="absolute -top-20 -left-20 w-40 h-40 bg-gradient-to-br from-takumi-red/20 to-red-500/10 rounded-full blur-3xl md:hidden animate-pulse-slow"></div>
+        <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-br from-red-500/20 to-takumi-red/10 rounded-full blur-3xl md:hidden animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+        
         {/* Food Icons Section - Top - Touch Interactive */}
-        <div className="mb-8 md:mb-12 flex items-center justify-center gap-3 md:gap-6 lg:gap-8 px-4">
+        <div className="mb-8 md:mb-12 flex items-center justify-center gap-3 md:gap-6 lg:gap-8 px-4 relative">
+          {/* Mobile: Decorative glow behind icons */}
+          <div className="absolute inset-0 bg-gradient-to-r from-takumi-red/10 via-transparent to-takumi-red/10 rounded-full blur-2xl md:hidden -z-10"></div>
           {/* Sushi Icon */}
           <div className="flex-shrink-0 group cursor-pointer icon-touch">
             <div className="transform transition-all duration-500 ease-out group-hover:scale-150 group-hover:-translate-y-4 group-hover:rotate-12 group-hover:drop-shadow-2xl active:scale-125 active:rotate-6">
@@ -216,18 +222,21 @@ export default function Hero() {
           </span>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center animate-slide-up px-4">
+        <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center animate-slide-up px-4 relative">
+          {/* Mobile: Enhanced button container with glow */}
+          <div className="md:hidden absolute inset-0 bg-gradient-to-r from-takumi-red/5 via-transparent to-red-500/5 rounded-3xl blur-2xl -z-10"></div>
+          
           <RippleButton
             href="/menu"
             variant="primary"
-            className="w-full sm:w-auto text-sm md:text-base px-6 md:px-10 py-3 md:py-4 sticky-button"
+            className="w-full sm:w-auto text-sm md:text-base px-6 md:px-10 py-3 md:py-4 sticky-button relative z-10 shadow-2xl shadow-red-500/30 md:shadow-lg"
           >
             <span>Order Now</span>
           </RippleButton>
           <RippleButton
             href="/menu"
             variant="secondary"
-            className="w-full sm:w-auto text-sm md:text-base px-6 md:px-10 py-3 md:py-4"
+            className="w-full sm:w-auto text-sm md:text-base px-6 md:px-10 py-3 md:py-4 relative z-10 shadow-xl md:shadow-md border-2 md:border-2"
           >
             View Menu
           </RippleButton>

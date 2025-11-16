@@ -278,3 +278,31 @@
   opacity: 0;
 }
 
+/* Mobile visual enhancements */
+@media (max-width: 768px) {
+  /* Enhanced shadows for mobile cards */
+  .card {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card:hover {
+    box-shadow: 0 20px 35px -5px rgba(196, 30, 58, 0.2), 0 10px 15px -5px rgba(196, 30, 58, 0.1);
+  }
+  
+  /* Enhanced button shadows on mobile */
+  .btn-primary {
+    box-shadow: 0 10px 25px -5px rgba(196, 30, 58, 0.4), 0 8px 10px -6px rgba(196, 30, 58, 0.3);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 15px 30px -5px rgba(196, 30, 58, 0.5), 0 10px 15px -5px rgba(196, 30, 58, 0.4);
+  }
+  
+  /* More vibrant text gradients on mobile */
+  .gradient-text {
+    background: linear-gradient(135deg, #c41e3a 0%, #dc2626 50%, #c41e3a 100%);
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+}
+

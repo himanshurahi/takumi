@@ -4,6 +4,7 @@ import MenuCard from './MenuCard'
 const featuredItems = [
   {
     name: 'Dragon Roll',
+    japaneseName: 'ドラゴンロール',
     price: '₹550',
     description: 'Eel, cucumber, avocado, topped with eel sauce and sesame seeds',
     image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop',
@@ -11,6 +12,7 @@ const featuredItems = [
   },
   {
     name: 'Chicken Fried Rice',
+    japaneseName: 'チキン炒飯',
     price: '₹280',
     description: 'Wok-tossed jasmine rice with tender chicken, vegetables, and soy sauce',
     image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop',
@@ -18,6 +20,7 @@ const featuredItems = [
   },
   {
     name: 'Ramen Bowl',
+    japaneseName: 'ラーメン',
     price: '₹380',
     description: 'Rich pork broth, ramen noodles, soft-boiled egg, and tender chashu',
     image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop',
@@ -25,6 +28,7 @@ const featuredItems = [
   },
   {
     name: 'Pork Belly Bao',
+    japaneseName: '豚バラ肉包',
     price: '₹180',
     description: 'Slow-braised pork belly in a fluffy steamed bun with hoisin sauce',
     image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
@@ -41,8 +45,8 @@ export default function MenuPreview() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-block px-4 py-1.5 bg-gradient-to-r from-takumi-red/10 to-red-500/10 rounded-full mb-6 border border-takumi-red/20">
-            <span className="text-sm font-semibold gradient-text">Our Specialties</span>
+          <div className="inline-block px-4 py-1.5 bg-white/80 backdrop-blur-sm rounded-full mb-6 border border-gray-200 shadow-sm">
+            <span className="text-sm font-semibold text-takumi-red">Our Specialties</span>
           </div>
           <h2 className="section-title">Featured Dishes</h2>
           <p className="section-subtitle max-w-2xl mx-auto">

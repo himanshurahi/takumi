@@ -2,19 +2,23 @@ import Image from 'next/image'
 
 interface MenuCardProps {
   name: string
+  japaneseName?: string
   price: string
   description: string
   image: string
   category: string
 }
 
-export default function MenuCard({ name, price, description, image, category }: MenuCardProps) {
+export default function MenuCard({ name, japaneseName, price, description, image, category }: MenuCardProps) {
   return (
     <div className="group cursor-pointer relative">
+      {/* Mobile: Enhanced glow effect */}
+      <div className="md:hidden absolute -inset-1 bg-gradient-to-r from-takumi-red/20 via-red-500/20 to-takumi-red/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+      
       {/* Japanese-style card with elegant border */}
-      <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-takumi-red/30 h-full flex flex-col">
-        {/* Decorative top accent line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-takumi-red/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
+      <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-takumi-red/30 h-full flex flex-col md:shadow-lg md:hover:shadow-2xl">
+        {/* Decorative top accent line - more visible on mobile */}
+        <div className="absolute top-0 left-0 right-0 h-1 md:h-1 bg-gradient-to-r from-transparent via-takumi-red/50 to-transparent opacity-60 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
         
         {/* Image container with Japanese frame effect */}
         <div className="relative h-64 overflow-hidden bg-gradient-to-br from-takumi-beige/30 to-white">
@@ -32,11 +36,11 @@ export default function MenuCard({ name, price, description, image, category }: 
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
           
-          {/* Category badge - Japanese style */}
+          {/* Category badge - Japanese style - Enhanced for mobile */}
           <div className="absolute top-4 right-4 z-20">
             <div className="relative">
-              <div className="absolute inset-0 bg-takumi-red/20 blur-sm rounded-full"></div>
-              <div className="relative bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full border border-takumi-red/30">
+              <div className="absolute inset-0 bg-takumi-red/30 md:bg-takumi-red/20 blur-sm rounded-full"></div>
+              <div className="relative bg-white/95 backdrop-blur-sm px-3 md:px-4 py-1.5 rounded-full border-2 border-takumi-red/40 md:border-takumi-red/30 shadow-lg md:shadow-md">
                 <span className="text-xs font-bold text-takumi-red tracking-wider uppercase">{category}</span>
               </div>
             </div>
@@ -52,21 +56,31 @@ export default function MenuCard({ name, price, description, image, category }: 
           </div>
         </div>
         
-        {/* Content section */}
-        <div className="p-6 flex-1 flex flex-col bg-white">
+        {/* Content section - Enhanced for mobile */}
+        <div className="p-5 md:p-6 flex-1 flex flex-col bg-white relative">
+          {/* Mobile: Subtle gradient background */}
+          <div className="md:hidden absolute inset-0 bg-gradient-to-br from-takumi-beige/10 via-transparent to-white opacity-50 -z-0"></div>
+          
           {/* Title and Price */}
-          <div className="mb-4">
+          <div className="mb-4 relative z-10">
             <div className="flex items-start justify-between gap-3 mb-2">
-              <h3 className="text-xl font-heading font-bold text-takumi-black group-hover:text-takumi-red transition-colors duration-300 flex-1">
-                {name}
-              </h3>
-              <span className="text-2xl font-bold bg-gradient-to-r from-takumi-red to-red-600 bg-clip-text text-transparent whitespace-nowrap">
+              <div className="flex-1">
+                <h3 className="text-lg md:text-xl font-heading font-bold text-takumi-black group-hover:text-takumi-red transition-colors duration-300">
+                  {name}
+                </h3>
+                {japaneseName && (
+                  <p className="text-xs md:text-sm text-gray-500 mt-1 font-medium" style={{ fontFamily: 'serif' }}>
+                    {japaneseName}
+                  </p>
+                )}
+              </div>
+              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-takumi-red to-red-600 bg-clip-text text-transparent whitespace-nowrap">
                 {price}
               </span>
             </div>
             
-            {/* Decorative divider */}
-            <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-3"></div>
+            {/* Decorative divider - more visible on mobile */}
+            <div className="h-px bg-gradient-to-r from-transparent via-takumi-red/20 md:via-gray-200 to-transparent my-3"></div>
           </div>
           
           {/* Description */}

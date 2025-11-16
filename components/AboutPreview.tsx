@@ -11,8 +11,8 @@ export default function AboutPreview() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="animate-slide-up">
-            <div className="inline-block px-4 py-1.5 bg-gradient-to-r from-takumi-red/10 to-red-500/10 rounded-full mb-6 border border-takumi-red/20">
-              <span className="text-sm font-semibold gradient-text">Our Journey</span>
+            <div className="inline-block px-4 py-1.5 bg-white/80 backdrop-blur-sm rounded-full mb-6 border border-gray-200 shadow-sm">
+              <span className="text-sm font-semibold text-takumi-red">Our Journey</span>
             </div>
             <h2 className="section-title">Our Story</h2>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">

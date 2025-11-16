@@ -41,8 +41,8 @@ export default function ContactForm() {
       
       <div className="relative z-10">
         <div className="mb-8">
-          <div className="inline-block px-4 py-1.5 bg-gradient-to-r from-takumi-red/10 to-red-500/10 rounded-full mb-4 border border-takumi-red/20">
-            <span className="text-xs font-semibold gradient-text">Get in Touch</span>
+          <div className="inline-block px-4 py-1.5 bg-white/80 backdrop-blur-sm rounded-full mb-4 border border-gray-200 shadow-sm">
+            <span className="text-xs font-semibold text-takumi-red">Get in Touch</span>
           </div>
           <h3 className="text-3xl font-heading font-bold text-takumi-black">
             Send us a Message
