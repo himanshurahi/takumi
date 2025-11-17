@@ -3,6 +3,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingActionButton from '@/components/FloatingActionButton'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: 'Takumi – Asian Kitchen | Authentic Asian Flavors',
@@ -14,9 +15,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID
+
   return (
     <html lang="en">
       <body>
+        {gaId && <GoogleAnalytics gaId={gaId} />}
         <Header />
         <main className="min-h-screen">
           {children}
