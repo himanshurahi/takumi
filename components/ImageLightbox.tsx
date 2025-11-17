@@ -72,12 +72,15 @@ export default function ImageLightbox({
 
       {/* Close button */}
       <button
-        onClick={onClose}
-        className="absolute top-4 right-4 md:top-8 md:right-8 z-[60] bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110 group"
+        onClick={(e) => {
+          e.stopPropagation()
+          onClose()
+        }}
+        className="absolute top-2 right-2 sm:top-4 sm:right-4 md:top-8 md:right-8 z-[60] bg-black/50 hover:bg-black/70 backdrop-blur-md rounded-full p-2 sm:p-3 md:p-4 transition-all duration-300 hover:scale-110 group touch-manipulation"
         aria-label="Close lightbox"
       >
         <svg
-          className="w-6 h-6 md:w-8 md:h-8 text-white"
+          className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -99,11 +102,11 @@ export default function ImageLightbox({
               e.stopPropagation()
               onPrevious()
             }}
-            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-[60] bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110 group"
+            className="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-[60] bg-black/50 hover:bg-black/70 backdrop-blur-md rounded-full p-2 sm:p-3 md:p-4 transition-all duration-300 hover:scale-110 group touch-manipulation"
             aria-label="Previous image"
           >
             <svg
-              className="w-6 h-6 md:w-8 md:h-8 text-white"
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -122,11 +125,11 @@ export default function ImageLightbox({
               e.stopPropagation()
               onNext()
             }}
-            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-[60] bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110 group"
+            className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-[60] bg-black/50 hover:bg-black/70 backdrop-blur-md rounded-full p-2 sm:p-3 md:p-4 transition-all duration-300 hover:scale-110 group touch-manipulation"
             aria-label="Next image"
           >
             <svg
-              className="w-6 h-6 md:w-8 md:h-8 text-white"
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -144,40 +147,40 @@ export default function ImageLightbox({
 
       {/* Image container */}
       <div
-        className="relative w-full h-full flex items-center justify-center p-4 md:p-8"
+        className="relative w-full h-full flex items-center justify-center p-2 sm:p-4 md:p-8"
         onClick={(e) => e.stopPropagation()}
       >
         <div
-          className={`relative max-w-7xl max-h-[90vh] w-full h-full transition-all duration-500 ${
+          className={`relative w-full h-full max-w-7xl max-h-[95vh] sm:max-h-[90vh] transition-all duration-500 ${
             isAnimating ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
           }`}
         >
-          <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-black/50">
+          <div className="relative w-full h-full rounded-lg sm:rounded-2xl overflow-hidden shadow-2xl bg-black/50">
             <Image
               src={currentImage.src}
               alt={currentImage.alt}
               fill
               className="object-contain"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 95vw, (max-width: 1200px) 90vw, 80vw"
               priority
             />
           </div>
 
           {/* Image info overlay */}
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-6 md:p-8">
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent p-3 sm:p-4 md:p-6 lg:p-8">
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-white text-xl md:text-2xl font-bold mb-2">
+              <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-1 sm:mb-2 line-clamp-2">
                 {currentImage.alt}
               </h3>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-gradient-to-r from-takumi-red to-red-600 rounded-full" />
-                <p className="text-white/80 text-sm md:text-base font-medium">
+              <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gradient-to-r from-takumi-red to-red-600 rounded-full flex-shrink-0" />
+                <p className="text-white/80 text-xs sm:text-sm md:text-base font-medium">
                   {currentImage.category}
                 </p>
                 {images.length > 1 && (
                   <>
-                    <span className="text-white/60 mx-2">•</span>
-                    <p className="text-white/60 text-sm md:text-base">
+                    <span className="text-white/60 mx-1 sm:mx-2">•</span>
+                    <p className="text-white/60 text-xs sm:text-sm md:text-base">
                       {currentIndex + 1} / {images.length}
                     </p>
                   </>
@@ -190,7 +193,7 @@ export default function ImageLightbox({
 
       {/* Image counter dots */}
       {images.length > 1 && (
-        <div className="absolute bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-[60]">
+        <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2 z-[60] px-2 max-w-full overflow-x-auto">
           {images.map((_, index) => (
             <button
               key={index}
@@ -200,10 +203,10 @@ export default function ImageLightbox({
                   onNavigate(index)
                 }
               }}
-              className={`h-2 rounded-full transition-all duration-300 ${
+              className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 flex-shrink-0 touch-manipulation ${
                 index === currentIndex
-                  ? 'bg-white w-8'
-                  : 'bg-white/40 hover:bg-white/60 w-2'
+                  ? 'bg-white w-6 sm:w-8'
+                  : 'bg-white/40 hover:bg-white/60 w-1.5 sm:w-2'
               }`}
               aria-label={`Go to image ${index + 1}`}
             />

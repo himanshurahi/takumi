@@ -1,4 +1,15 @@
+'use client'
+
 import Image from 'next/image'
+import { useState } from 'react'
+import { 
+  GiSushis, 
+  GiNoodles, 
+  GiRiceCooker, 
+  GiDumpling, 
+  GiChickenLeg,
+  GiSushi
+} from 'react-icons/gi'
 
 interface MenuCardProps {
   name: string
@@ -9,7 +20,31 @@ interface MenuCardProps {
   category: string
 }
 
+// Category-specific loading icons using React Icons
+const getLoadingIcon = (category: string) => {
+  const categoryLower = category.toLowerCase()
+  const iconClass = "w-16 h-16 text-takumi-red animate-pulse"
+  
+  if (categoryLower.includes('sushi')) {
+    return <GiSushis className={iconClass} />
+  } else if (categoryLower.includes('noodle')) {
+    return <GiNoodles className={iconClass} />
+  } else if (categoryLower.includes('rice')) {
+    return <GiRiceCooker className={iconClass} />
+  } else if (categoryLower.includes('dimsum') || categoryLower.includes('bao')) {
+    return <GiDumpling className={iconClass} />
+  } else if (categoryLower.includes('starter') || categoryLower.includes('chicken') || categoryLower.includes('paneer')) {
+    return <GiChickenLeg className={iconClass} />
+  }
+  
+  // Default loading icon (sushi)
+  return <GiSushi className={iconClass} />
+}
+
 export default function MenuCard({ name, japaneseName, price, description, image, category }: MenuCardProps) {
+  const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
+
   return (
     <div className="group cursor-pointer relative h-full">
       {/* Mobile: Enhanced glow effect */}
@@ -26,11 +61,43 @@ export default function MenuCard({ name, japaneseName, price, description, image
           <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-takumi-red/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
           <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-takumi-red/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
           
+          {/* Loading placeholder */}
+          {isLoading && !hasError && (
+            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-takumi-beige/50 to-white z-10">
+              <div className="flex flex-col items-center gap-3">
+                {getLoadingIcon(category)}
+                <div className="flex gap-1">
+                  <div className="w-2 h-2 bg-takumi-red rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+                  <div className="w-2 h-2 bg-takumi-red rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-2 h-2 bg-takumi-red rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {/* Error placeholder */}
+          {hasError && (
+            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-takumi-beige/50 to-white z-10">
+              <div className="flex flex-col items-center gap-2 text-gray-400">
+                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span className="text-xs">Image unavailable</span>
+              </div>
+            </div>
+          )}
+          
           <Image
             src={image}
             alt={name}
             fill
-            className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+            loading="lazy"
+            className={`object-cover group-hover:scale-110 transition-all duration-700 ease-out ${isLoading ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
+            onLoad={() => setIsLoading(false)}
+            onError={() => {
+              setIsLoading(false)
+              setHasError(true)
+            }}
           />
           
           {/* Gradient overlay */}

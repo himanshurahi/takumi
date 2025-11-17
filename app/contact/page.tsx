@@ -11,7 +11,7 @@ export default function ContactPage() {
             We'd love to hear from you. Get in touch with us!
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
           <ContactInfo />
           <ContactForm />
         </div>
