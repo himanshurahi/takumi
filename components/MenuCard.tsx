@@ -11,7 +11,7 @@ interface MenuCardProps {
 
 export default function MenuCard({ name, japaneseName, price, description, image, category }: MenuCardProps) {
   return (
-    <div className="group cursor-pointer relative">
+    <div className="group cursor-pointer relative h-full">
       {/* Mobile: Enhanced glow effect */}
       <div className="md:hidden absolute -inset-1 bg-gradient-to-r from-takumi-red/20 via-red-500/20 to-takumi-red/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
       
@@ -84,12 +84,14 @@ export default function MenuCard({ name, japaneseName, price, description, image
           </div>
           
           {/* Description */}
-          <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1 group-hover:text-gray-700 transition-colors duration-300 line-clamp-3">
-            {description}
-          </p>
+          <div className="flex-1 flex items-start mb-4 min-h-[4.5rem]">
+            <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300 line-clamp-3">
+              {description}
+            </p>
+          </div>
           
           {/* Japanese-style footer with decorative element */}
-          <div className="mt-auto pt-4 border-t border-gray-100">
+          <div className="pt-4 border-t border-gray-100">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 {/* Japanese star/chef icon */}

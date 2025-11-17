@@ -342,11 +342,11 @@ export default function MenuList() {
         <div className="md:hidden absolute top-1/3 left-1/4 w-20 h-20 bg-takumi-red/8 rounded-full blur-2xl"></div>
         <div className="md:hidden absolute bottom-1/3 right-1/4 w-16 h-16 bg-red-500/8 rounded-full blur-2xl"></div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8 relative z-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 lg:gap-8 relative z-10 items-stretch">
           {getFilteredItems().map((item, index) => (
             <div 
               key={`${item.name}-${index}`} 
-              className="animate-slide-up" 
+              className="animate-slide-up h-full" 
               style={{ animationDelay: `${index * 0.08}s` }}
             >
               <MenuCard {...item} />

@@ -26,14 +26,6 @@ const featuredItems = [
     image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop',
     category: 'Noodles',
   },
-  {
-    name: 'Pork Belly Bao',
-    japaneseName: '豚バラ肉包',
-    price: '₹180',
-    description: 'Slow-braised pork belly in a fluffy steamed bun with hoisin sauce',
-    image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
-    category: 'Bao',
-  },
 ]
 
 export default function MenuPreview() {
@@ -54,9 +46,9 @@ export default function MenuPreview() {
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 items-stretch">
           {featuredItems.map((item, index) => (
-            <div key={item.name} className="animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div key={item.name} className="animate-slide-up h-full" style={{ animationDelay: `${index * 0.1}s` }}>
               <MenuCard {...item} />
             </div>
           ))}
