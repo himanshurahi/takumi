@@ -7,8 +7,7 @@ import {
   GiNoodles, 
   GiRiceCooker, 
   GiDumpling, 
-  GiChickenLeg,
-  GiSushi
+  GiChickenLeg
 } from 'react-icons/gi'
 
 interface MenuCardProps {
@@ -38,7 +37,7 @@ const getLoadingIcon = (category: string) => {
   }
   
   // Default loading icon (sushi)
-  return <GiSushi className={iconClass} />
+  return <GiSushis className={iconClass} />
 }
 
 export default function MenuCard({ name, japaneseName, price, description, image, category }: MenuCardProps) {
