@@ -52,7 +52,7 @@ export default function FloatingActionButton() {
           
           {/* Call Button */}
           <RippleButton
-            href="tel:09996939329"
+            href="tel:9996939329"
             variant="secondary"
             className="group relative flex items-center justify-center w-14 h-14 bg-white text-takumi-red rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 border-2 border-gray-100 !px-0 !py-0"
             onClick={() => setIsExpanded(false)}

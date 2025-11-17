@@ -2,147 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react'
 import MenuCard from './MenuCard'
+import menuItems from '@/data/menu.json'
 
-const menuItems = {
-  sushi: [
-    {
-      name: 'Salmon Sashimi',
-      japaneseName: 'サーモン刺身',
-      price: '₹450',
-      description: 'Fresh Atlantic salmon, expertly sliced and served with wasabi and soy sauce',
-      image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop',
-      category: 'Sushi',
-    },
-    {
-      name: 'Dragon Roll',
-      japaneseName: 'ドラゴンロール',
-      price: '₹550',
-      description: 'Eel, cucumber, avocado, topped with eel sauce and sesame seeds',
-      image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop',
-      category: 'Sushi',
-    },
-    {
-      name: 'California Roll',
-      japaneseName: 'カリフォルニアロール',
-      price: '₹380',
-      description: 'Crab, avocado, cucumber, wrapped in nori and sushi rice',
-      image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop',
-      category: 'Sushi',
-    },
-    {
-      name: 'Tuna Nigiri',
-      japaneseName: 'マグロ握り',
-      price: '₹420',
-      description: 'Premium tuna over seasoned sushi rice, a classic favorite',
-      image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop',
-      category: 'Sushi',
-    },
-  ],
-  friedRice: [
-    {
-      name: 'Chicken Fried Rice',
-      japaneseName: 'チキン炒飯',
-      price: '₹280',
-      description: 'Wok-tossed jasmine rice with tender chicken, vegetables, and soy sauce',
-      image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop',
-      category: 'Fried Rice',
-    },
-    {
-      name: 'Vegetable Fried Rice',
-      japaneseName: '野菜炒飯',
-      price: '₹240',
-      description: 'Colorful mix of fresh vegetables stir-fried with fragrant jasmine rice',
-      image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop',
-      category: 'Fried Rice',
-    },
-    {
-      name: 'Prawn Fried Rice',
-      japaneseName: 'エビ炒飯',
-      price: '₹320',
-      description: 'Succulent prawns with jasmine rice, eggs, and aromatic seasonings',
-      image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop',
-      category: 'Fried Rice',
-    },
-    {
-      name: 'Egg Fried Rice',
-      japaneseName: '卵炒飯',
-      price: '₹220',
-      description: 'Classic comfort food with scrambled eggs and perfectly seasoned rice',
-      image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop',
-      category: 'Fried Rice',
-    },
-  ],
-  noodles: [
-    {
-      name: 'Pad Thai',
-      japaneseName: 'パッタイ',
-      price: '₹320',
-      description: 'Stir-fried rice noodles with tamarind, peanuts, and your choice of protein',
-      image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop',
-      category: 'Noodles',
-    },
-    {
-      name: 'Ramen Bowl',
-      japaneseName: 'ラーメン',
-      price: '₹380',
-      description: 'Rich pork broth, ramen noodles, soft-boiled egg, and tender chashu',
-      image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop',
-      category: 'Noodles',
-    },
-    {
-      name: 'Chicken Lo Mein',
-      japaneseName: 'チキンローメン',
-      price: '₹290',
-      description: 'Wheat noodles with chicken, vegetables, and savory sauce',
-      image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop',
-      category: 'Noodles',
-    },
-    {
-      name: 'Vegetable Chow Mein',
-      japaneseName: '野菜チャウメン',
-      price: '₹260',
-      description: 'Crispy noodles topped with fresh stir-fried vegetables',
-      image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop',
-      category: 'Noodles',
-    },
-  ],
-  bao: [
-    {
-      name: 'Pork Belly Bao',
-      japaneseName: '豚バラ肉包',
-      price: '₹180',
-      description: 'Slow-braised pork belly in a fluffy steamed bun with hoisin sauce',
-      image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
-      category: 'Bao',
-    },
-    {
-      name: 'Chicken Bao',
-      japaneseName: 'チキン包',
-      price: '₹160',
-      description: 'Tender marinated chicken with pickled vegetables in a soft bun',
-      image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
-      category: 'Bao',
-    },
-    {
-      name: 'Vegetable Bao',
-      japaneseName: '野菜包',
-      price: '₹140',
-      description: 'Fresh vegetables and tofu with our signature sauce',
-      image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
-      category: 'Bao',
-    },
-    {
-      name: 'Crispy Tofu Bao',
-      japaneseName: 'カリカリ豆腐包',
-      price: '₹150',
-      description: 'Crispy tofu with spicy mayo and fresh greens',
-      image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
-      category: 'Bao',
-    },
-  ],
-}
-
-const categories = ['All', 'Sushi', 'Fried Rice', 'Noodles', 'Bao']
+const categories = ['All', 'Sushi', 'Noodles', 'Fried Rice', 'Starters', 'Dimsums', 'Bao']
 
 export default function MenuList() {
   const [activeCategory, setActiveCategory] = useState('All')
@@ -250,17 +112,26 @@ export default function MenuList() {
     if (activeCategory === 'All') {
       return [
         ...menuItems.sushi,
-        ...menuItems.friedRice,
         ...menuItems.noodles,
+        ...menuItems.friedRice,
+        ...menuItems.startersVeg,
+        ...menuItems.startersNonVeg,
+        ...menuItems.dimsums,
         ...menuItems.bao,
       ]
     }
     
     const categoryMap: { [key: string]: keyof typeof menuItems } = {
       'Sushi': 'sushi',
-      'Fried Rice': 'friedRice',
       'Noodles': 'noodles',
+      'Fried Rice': 'friedRice',
+      'Starters': 'startersVeg', // Will combine both veg and non-veg
+      'Dimsums': 'dimsums',
       'Bao': 'bao',
+    }
+    
+    if (activeCategory === 'Starters') {
+      return [...menuItems.startersVeg, ...menuItems.startersNonVeg]
     }
     
     return menuItems[categoryMap[activeCategory]] || []
@@ -357,4 +228,3 @@ export default function MenuList() {
     </div>
   )
 }
-

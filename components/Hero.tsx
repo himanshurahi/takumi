@@ -231,7 +231,7 @@ export default function Hero() {
             variant="primary"
             className="w-full sm:w-auto text-sm md:text-base px-6 md:px-10 py-3 md:py-4 sticky-button relative z-10 shadow-2xl shadow-red-500/30 md:shadow-lg"
           >
-            <span>Order Now</span>
+            Order Now
           </RippleButton>
           <RippleButton
             href="/menu"

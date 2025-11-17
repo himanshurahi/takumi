@@ -1,0 +1,305 @@
+{
+  "sushi": [
+    {
+      "name": "Avocado Tempura Roll",
+      "japaneseName": "アボカド天ぷらロール",
+      "price": "₹350",
+      "description": "8 pcs — A delightful inside-out sushi roll with avocado, beans, cucumber, white mayo, and cream cheese, wrapped in seasoned sushi rice and topped with sesame seeds. Served with Soy Sauce, pickled ginger (Gari), and Wasabi.",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+      "category": "Sushi"
+    },
+    {
+      "name": "Futo Maki",
+      "japaneseName": "太巻き",
+      "price": "₹350",
+      "description": "8 pcs — A classic Japanese sushi roll filled with beans, carrot, cucumber, spicy mayo, and white mayo, wrapped in seasoned sushi rice and nori. Served with Soy Sauce, pickled ginger (Gari), and Wasabi.",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+      "category": "Sushi"
+    },
+    {
+      "name": "Kappa Maki",
+      "japaneseName": "かっぱ巻き",
+      "price": "₹350",
+      "description": "8 pcs — A light and refreshing sushi roll with rice, cucumber, white mayo, and cream cheese, wrapped in Seaweed. Served with Soy Sauce, pickled ginger (Gari), and Wasabi.",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+      "category": "Sushi"
+    },
+    {
+      "name": "Avocado Uramaki",
+      "japaneseName": "アボカド裏巻き",
+      "price": "₹400",
+      "description": "8 pcs — Inside-out sushi roll filled with creamy avocado, rich cream cheese, and seasoned sushi rice wrapped in nori, topped with thinly sliced avocado for an extra buttery finish. Smooth, fresh, and indulgent.",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+      "category": "Sushi"
+    },
+    {
+      "name": "Veg California Roll",
+      "japaneseName": "ベジカリフォルニアロール",
+      "price": "₹400",
+      "description": "8 pcs — A light and refreshing roll with rice, cucumber, carrot and beans, white mayo, and cream cheese, wrapped inside out on Seaweed. Topped with toasted sesame seeds. Served with Soy Sauce, pickled ginger (Gari), and Wasabi.",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+      "category": "Sushi"
+    },
+    {
+      "name": "Tempura Sushi",
+      "japaneseName": "天ぷら寿司",
+      "price": "₹400",
+      "description": "8 pcs — A crispy twist on sushi with fried vegetables, cream cheese, and spicy mayo, wrapped inside-out with Nori and topped with Tempura Flakes. Served with Soy Sauce, pickled ginger (Gari), and Wasabi.",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+      "category": "Sushi"
+    },
+    {
+      "name": "Crispy Shiitake Tempura",
+      "japaneseName": "シイタケ天ぷら",
+      "price": "₹500",
+      "description": "8 pcs — Crispy shiitake tempura rolled in perfectly seasoned sushi rice paired with crunchy cucumber, spicy mayo, and sweet mayo topped with crispy tanuki flakes. Served with soy, gari & wasabi.",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+      "category": "Sushi"
+    },
+    {
+      "name": "California Roll",
+      "japaneseName": "カリフォルニアロール",
+      "price": "₹549",
+      "description": "8 pcs — A fresh and flavorful roll with crunchy cucumber, crabstick, white mayo, cream cheese, and seasoned sushi rice, wrapped in seaweed. Served with spicy mayo, soy sauce, Wasabi, and pickled ginger (Gari) for a balanced taste in every bite.",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+      "category": "Sushi"
+    },
+    {
+      "name": "Ebi Tempura Maki",
+      "japaneseName": "エビ天ぷら巻き",
+      "price": "₹500",
+      "description": "8 pcs — A flavourful sushi roll featuring seasoned sushi rice, golden battered Prawns, white mayo, Spicy mayo rolled inside out on a Seaweed topped with Tempura flakes served with Soy, Wasabi, and pickled ginger (Gari).",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+      "category": "Sushi"
+    },
+    {
+      "name": "Avocado Ebi Tempura",
+      "japaneseName": "アボカドエビ天ぷら",
+      "price": "₹500",
+      "description": "8 pcs — A savoury sushi roll featuring Perfectly seasoned sushi rice crispy, golden-battered Prawn, spicy mayo, white mayo Rolled inside-out on Nori sheet Topped with avocado slices served with Soy, Gari, and Wasabi.",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+      "category": "Sushi"
+    },
+    {
+      "name": "Chicken Katsu Roll",
+      "japaneseName": "チキンカツロール",
+      "price": "₹500",
+      "description": "8 pcs — Crispy panko-breaded chicken rolled with sushi rice, nori, and a hint of tangy katsu sauce. Served with a drizzle of spicy mayo and a side of pickled ginger & wasabi. A perfect fusion of crunch and flavor!",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+      "category": "Sushi"
+    }
+  ],
+  "noodles": [
+    {
+      "name": "Chilli Garlic Noodles",
+      "japaneseName": "チリガーリック麺",
+      "price": "₹180",
+      "description": "Spicy wok-tossed noodles with fresh garlic, red chilies, and a blend of sauces, mixed with crunchy vegetables for a bold and savoury kick in every bite.",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop",
+      "category": "Noodles"
+    },
+    {
+      "name": "Hakka Style Noodles",
+      "japaneseName": "客家風麺",
+      "price": "₹150",
+      "description": "A classic Indo-Chinese dish of stir-fried noodles with crunchy vegetables, soy sauce, garlic, and spices, offering a perfect savoury and umami flavour.",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop",
+      "category": "Noodles"
+    },
+    {
+      "name": "Wok Tossed Fresh Noodles",
+      "japaneseName": "フレッシュ麺",
+      "price": "₹180",
+      "description": "Freshly stir-fried noodles with vibrant vegetables, aromatic sauces, and a hint of smoky flavour, offering a perfect blend of freshness and bold Asian-inspired tastes.",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop",
+      "category": "Noodles"
+    },
+    {
+      "name": "Kolkata Style Tangra Noodles",
+      "japaneseName": "コルカタ風タングラ麺",
+      "price": "₹180",
+      "description": "A classic take on Kolkata's Tangra cuisine, these stir-fried noodles are packed with crunchy vegetables, bold spices, and a savoury blend of soy and chili sauces. Perfectly balanced with heat and tang, it's a nostalgic street-style favourite.",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop",
+      "category": "Noodles"
+    }
+  ],
+  "friedRice": [
+    {
+      "name": "Burnt Garlic Fried Rice",
+      "japaneseName": "焦がしニンニク炒飯",
+      "price": "₹150",
+      "description": "Aromatic rice stir-fried with crispy burnt garlic, fresh vegetables, and savoury sauces for a rich, smoky flavour. Perfect on its own.",
+      "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop",
+      "category": "Fried Rice"
+    },
+    {
+      "name": "Sichuan Fried Rice",
+      "japaneseName": "四川炒飯",
+      "price": "₹180",
+      "description": "A spicy Sichuan-inspired rice dish with fresh vegetables, aromatic spices, and a fiery blend of chili oil and sauces. Packed with heat and bold flavors for an adventurous treat.",
+      "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop",
+      "category": "Fried Rice"
+    },
+    {
+      "name": "Mongolian Fried Rice",
+      "japaneseName": "モンゴル炒飯",
+      "price": "₹180",
+      "description": "Fragrant stir-fried rice with fresh vegetables, tossed in a savory-sweet Mongolian-style sauce. Rich in umami with a hint of smokiness, it's a perfect balance of flavor and crunch.",
+      "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop",
+      "category": "Fried Rice"
+    }
+  ],
+  "startersVeg": [
+    {
+      "name": "Thai Spring Roll",
+      "japaneseName": "タイ春巻き",
+      "price": "₹300",
+      "description": "5 pcs — Crispy golden rolls filled with glass noodles, fresh veggies, and Thai herbs. Served with sweet chili sauce for the perfect bite of flavor and crunch.",
+      "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800&h=600&fit=crop",
+      "category": "Starters"
+    },
+    {
+      "name": "Crispy Potato",
+      "japaneseName": "カリカリポテト",
+      "price": "₹250",
+      "description": "Thinly sliced potatoes fried to golden perfection, tossed in a sweet and spicy chili glaze with sesame and spring onions for a delightful crunch in every bite.",
+      "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800&h=600&fit=crop",
+      "category": "Starters"
+    },
+    {
+      "name": "Black Pepper Paneer",
+      "japaneseName": "ブラックペッパーパニール",
+      "price": "₹300",
+      "description": "Crispy paneer tossed in a bold black pepper sauce with onions, capsicum, and a touch of soy—fiery, aromatic, and packed with flavor.",
+      "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800&h=600&fit=crop",
+      "category": "Starters"
+    },
+    {
+      "name": "Tangra Chilli Paneer",
+      "japaneseName": "タングラチリパニール",
+      "price": "₹300",
+      "description": "Crispy paneer tossed in a fiery Indo-Chinese sauce with peppers, onions, and bold spices.",
+      "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800&h=600&fit=crop",
+      "category": "Starters"
+    },
+    {
+      "name": "Chilli Basil Paneer",
+      "japaneseName": "チリバジルパニール",
+      "price": "₹300",
+      "description": "Crispy paneer cubes tossed with fresh Thai basil, garlic, chilies, onions, and bell peppers in a spicy, aromatic sauce. A bold vegetarian stir-fry bursting with flavor and wok-charred goodness.",
+      "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800&h=600&fit=crop",
+      "category": "Starters"
+    }
+  ],
+  "startersNonVeg": [
+    {
+      "name": "Black Pepper Chicken",
+      "japaneseName": "ブラックペッパーチキン",
+      "price": "₹300",
+      "description": "Tender chicken stir-fried with crushed black pepper, onions, and bell peppers in a bold, spicy sauce—flavorful, aromatic, and perfectly balanced with heat.",
+      "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop",
+      "category": "Starters"
+    },
+    {
+      "name": "Tangra Chilli Chicken",
+      "japaneseName": "タングラチリチキン",
+      "price": "₹300",
+      "description": "A Kolkata-Chinatown classic—crispy chicken tossed in a spicy garlic-chili sauce with onions and peppers. Fiery, tangy, and full of bold Indo-Chinese flavor.",
+      "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop",
+      "category": "Starters"
+    },
+    {
+      "name": "Dragon Pepper Chicken",
+      "japaneseName": "ドラゴンペッパーチキン",
+      "price": "₹300",
+      "description": "A Kolkata-Chinatown classic—crispy chicken tossed in a spicy garlic-chili sauce with onions and peppers. Fiery, tangy, and full of bold Indo-Chinese flavor.",
+      "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop",
+      "category": "Starters"
+    },
+    {
+      "name": "Thai Basil Chicken",
+      "japaneseName": "タイバジルチキン",
+      "price": "₹300",
+      "description": "Wok-tossed chicken with fresh Thai basil, garlic, chilies, onions, and bell peppers in a spicy, aromatic sauce. A vibrant, fiery dish packed with bold flavors and crunchy veggies.",
+      "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop",
+      "category": "Starters"
+    }
+  ],
+  "dimsums": [
+    {
+      "name": "Beijing Crystal",
+      "japaneseName": "北京クリスタル",
+      "price": "₹300",
+      "description": "5 pcs — Translucent dumplings filled with ginger-garlic sautéed veggies like carrot, zucchini, baby corn, celery, and broccoli. Light, fresh, and full of flavor.",
+      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop",
+      "category": "Dimsums"
+    },
+    {
+      "name": "Basil Chicken Sui Mui",
+      "japaneseName": "バジルチキン水餃",
+      "price": "₹300",
+      "description": "5 pcs — Delicate open-faced dimsum filled with minced chicken, fresh Thai basil, garlic, and aromatic herbs, steamed to perfection. A fragrant twist on the classic sui mui, bursting with bold, zesty flavors.",
+      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop",
+      "category": "Dimsums"
+    }
+  ],
+  "bao": [
+    {
+      "name": "Edamame",
+      "japaneseName": "枝豆",
+      "price": "₹200",
+      "description": "A healthy and flavourful appetizer of tender edamame pods stir-fried with garlic, red chili flakes, and a hint of soy sauce.",
+      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop",
+      "category": "Bao"
+    },
+    {
+      "name": "Chilli Garlic Edamame",
+      "japaneseName": "チリガーリック枝豆",
+      "price": "₹200",
+      "description": "A healthy and flavourful appetizer of tender edamame pods stir-fried with extra garlic, red chili flakes, and a hint of soy sauce.",
+      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop",
+      "category": "Bao"
+    },
+    {
+      "name": "Holy Paneer Bao",
+      "japaneseName": "ホーリーパニール包",
+      "price": "₹200",
+      "description": "2 pcs — Pillowy soft bao buns stuffed with crispy paneer, wok-tossed in a fragrant Holy-basil sauce. Balanced with crunchy bell peppers, onions, and fresh Thai basil for an aromatic kick. Finished with spring greens and toasted sesame seeds.",
+      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop",
+      "category": "Bao"
+    },
+    {
+      "name": "Kung Pao Paneer Bao",
+      "japaneseName": "宮保パニール包",
+      "price": "₹200",
+      "description": "2 pcs — Soft steamed buns stuffed with spicy grilled paneer, tangy sauce, fresh greens, and pickled onions, blending bold Indian flavours with Asian flair.",
+      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop",
+      "category": "Bao"
+    },
+    {
+      "name": "Chilli Basil Chicken Bao",
+      "japaneseName": "チリバジルチキン包",
+      "price": "₹200",
+      "description": "2 pcs — Fluffy steamed buns stuffed with spicy stir-fried chicken, fresh basil, and savory chili sauce for an aromatic, flavorful snack with a touch of heat.",
+      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop",
+      "category": "Bao"
+    },
+    {
+      "name": "Chilli Chicken Bao",
+      "japaneseName": "チリチキン包",
+      "price": "₹300",
+      "description": "2 pcs — Soft steamed buns stuffed with spicy, tangy Indo-Chinese chili chicken, tossed with peppers and onions for a flavorful fusion treat.",
+      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop",
+      "category": "Bao"
+    },
+    {
+      "name": "Three Mushroom Bao",
+      "japaneseName": "三種きのこ包",
+      "price": "₹300",
+      "description": "2 pcs — Soft, pillowy bao buns filled with umami-rich deep fried mushrooms, tossed in a savory homemade sauce, topped with crunchy pickled veggies, fresh scallions, and a hint of sriracha mayo.",
+      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop",
+      "category": "Bao"
+    }
+  ]
+}
+

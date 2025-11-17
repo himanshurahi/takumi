@@ -28,8 +28,8 @@ export default function ContactInfo() {
                 <div>
                   <h4 className="font-bold text-takumi-black mb-2">Address</h4>
                   <p className="text-gray-700 leading-relaxed">
-                    200L, Chowk, Near Sai Market<br />
-                    Model Town, Sonipat<br />
+                    200-L, Near Sai Market Chowk,<br />
+                    Model Town, Sonipat,<br />
                     Haryana 131001
                   </p>
                 </div>
@@ -45,12 +45,21 @@ export default function ContactInfo() {
                 </div>
                 <div>
                   <h4 className="font-bold text-takumi-black mb-2">Phone</h4>
-                  <a href="tel:09996939329" className="text-lg font-semibold text-gray-700 hover:text-takumi-red transition-colors inline-flex items-center gap-2">
-                    <span>099969 39329</span>
+                  <a href="tel:9996939329" className="text-lg font-semibold text-gray-700 hover:text-takumi-red transition-colors inline-flex items-center gap-2">
+                    <span>9996939329</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
+                  <p className="text-sm text-gray-600 mt-2">Self Pickup Available</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <a href="https://www.zomato.com" target="_blank" rel="noopener noreferrer" className="text-sm px-3 py-1.5 bg-gradient-to-r from-takumi-red/10 to-red-500/10 hover:from-takumi-red/20 hover:to-red-500/20 rounded-full text-takumi-red font-medium transition-all duration-300 border border-takumi-red/20">
+                      Order on Zomato
+                    </a>
+                    <a href="https://www.swiggy.com" target="_blank" rel="noopener noreferrer" className="text-sm px-3 py-1.5 bg-gradient-to-r from-takumi-red/10 to-red-500/10 hover:from-takumi-red/20 hover:to-red-500/20 rounded-full text-takumi-red font-medium transition-all duration-300 border border-takumi-red/20">
+                      Order on Swiggy
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -66,12 +75,12 @@ export default function ContactInfo() {
                   <h4 className="font-bold text-takumi-black mb-3">Opening Hours</h4>
                   <div className="space-y-2">
                     <div className="flex justify-between items-center p-2 rounded-lg bg-gray-50/50">
-                      <span className="text-gray-600 font-medium">Monday - Friday</span>
-                      <span className="text-takumi-black font-semibold">11:00 AM - 10:00 PM</span>
+                      <span className="text-gray-600 font-medium">Monday</span>
+                      <span className="text-takumi-red font-semibold">Closed</span>
                     </div>
-                    <div className="flex justify-between items-center p-2 rounded-lg bg-gray-50/50">
-                      <span className="text-gray-600 font-medium">Saturday - Sunday</span>
-                      <span className="text-takumi-black font-semibold">12:00 PM - 11:00 PM</span>
+                    <div className="flex justify-between items-center p-2 rounded-lg bg-gray-50/50 gap-4">
+                      <span className="text-gray-600 font-medium">Tuesday - Sunday</span>
+                      <span className="text-takumi-black font-semibold whitespace-nowrap">11:00 AM - 11:00 PM</span>
                     </div>
                   </div>
                 </div>
@@ -81,7 +90,7 @@ export default function ContactInfo() {
         </div>
       </div>
       
-      {/* Map Placeholder */}
+      {/* Google Maps */}
       <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100/50 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-takumi-red/10 to-transparent rounded-full blur-2xl" />
         <div className="relative z-10">
@@ -91,17 +100,17 @@ export default function ContactInfo() {
             </svg>
             Find Us
           </h4>
-          <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden border-2 border-gray-200">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <svg className="w-16 h-16 text-gray-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-gray-500 font-medium">Map placeholder</p>
-                <p className="text-gray-400 text-sm mt-1">Integrate Google Maps here</p>
-              </div>
-            </div>
+          <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden border-2 border-gray-200 shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.120391954244!2d77.02313037551374!3d28.98380327547476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390db1d2a7a786b7%3A0x1779295063f80040!2sTakumi%20-%20Asian%20kitchen!5e0!3m2!1sen!2sin!4v1763347918937!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 w-full h-full"
+            />
           </div>
         </div>
       </div>

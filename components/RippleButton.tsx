@@ -54,7 +54,7 @@ export default function RippleButton({
 
   const content = (
     <>
-      {children}
+      <span className="relative z-10">{children}</span>
       {ripples.map((ripple) => (
         <span
           key={ripple.id}
